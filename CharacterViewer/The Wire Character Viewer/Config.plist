@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>urlString</key>
+	<string>http://api.duckduckgo.com/?q=the+wire+characters&amp;format=json</string>
+	<key>dataModel</key>
+	<string>TheWireDataModel</string>
+	<key>appName</key>
+	<string>The Wire Character Viewer</string>
+</dict>
+</plist>

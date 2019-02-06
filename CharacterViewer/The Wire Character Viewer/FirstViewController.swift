@@ -7,31 +7,44 @@
 //
 import UIKit
 import CoreData
+import CoreFramework
 
 class FirstViewController: UIViewController {
-    
     var characters = [TheWireCharacter]()
+    
+    /// Parses the Config.plist configuration where the App Name, URL String and Data Model names are
+    ///
+    /// - Returns: A Config object
+    func parseConfig() -> Config {
+        let url = Bundle.main.url(forResource: "Config", withExtension: "plist")!
+        let data = try! Data(contentsOf: url)
+        let decoder = PropertyListDecoder()
+        return try! decoder.decode(Config.self, from: data)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print(PersistenceService.context)
+        let config = parseConfig()
+        print(config.appName)
+        StorageManager.dataModel = config.dataModel
         
-        let fetchRequest = NSFetchRequest<TheWireCharacter>(entityName: "TheWireCharacter")
-        
-        do{
-            let characters = try PersistenceService.context.fetch(fetchRequest)
-            self.characters = characters
-            //self.tableView.reloadData()
-        } catch {
-            print("Error fetching data from context \(error)")
-        }
-        
+        fetchData()
         addCharacter()
     }
     
+    func fetchData() {
+        let fetchRequest = NSFetchRequest<TheWireCharacter>(entityName: "TheWireCharacter")
+        do {
+            let characters = try StorageManager.persistentContainer.viewContext.fetch(fetchRequest)
+            self.characters = characters
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
+    }
+    
     func addCharacter() {
-        let char1 = TheWireCharacter(context: PersistenceService.context)
+        let char1 = TheWireCharacter(context: StorageManager.persistentContainer.viewContext)
         
         char1.title = "test1"
         char1.is_favorite = false
@@ -39,8 +52,6 @@ class FirstViewController: UIViewController {
         
         characters.append(char1)
         
-        PersistenceService.saveContext()
+        StorageManager.saveContext()
     }
-    
-    
 }
