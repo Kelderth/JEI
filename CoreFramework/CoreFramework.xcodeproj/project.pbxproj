@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A198660220B7E27002AD267 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19865F220B7E27002AD267 /* NetworkManager.swift */; };
+		2A198662220B7EA2002AD267 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A198661220B7EA2002AD267 /* JSONParser.swift */; };
+		2A198664220B7ED0002AD267 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A198663220B7ED0002AD267 /* StorageManager.swift */; };
+		2A198666220B7F7B002AD267 /* CodingUserInfoKey+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A198665220B7F7B002AD267 /* CodingUserInfoKey+Extension.swift */; };
 		3D802DAB220B47E3009A34B5 /* CoreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D802DA9220B47E3009A34B5 /* CoreFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A19865F220B7E27002AD267 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2A198661220B7EA2002AD267 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		2A198663220B7ED0002AD267 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		2A198665220B7F7B002AD267 /* CodingUserInfoKey+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+Extension.swift"; sourceTree = "<group>"; };
 		3D802DA6220B47E3009A34B5 /* CoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D802DA9220B47E3009A34B5 /* CoreFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreFramework.h; sourceTree = "<group>"; };
 		3D802DAA220B47E3009A34B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A19865C220B7D9D002AD267 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2A19865F220B7E27002AD267 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2A19865D220B7DAE002AD267 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2A198663220B7ED0002AD267 /* StorageManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		2A19865E220B7E18002AD267 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2A198661220B7EA2002AD267 /* JSONParser.swift */,
+				2A198665220B7F7B002AD267 /* CodingUserInfoKey+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		3D802D9C220B47E2009A34B5 = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +79,9 @@
 		3D802DA8220B47E3009A34B5 /* CoreFramework */ = {
 			isa = PBXGroup;
 			children = (
+				2A19865E220B7E18002AD267 /* Helpers */,
+				2A19865D220B7DAE002AD267 /* Storage */,
+				2A19865C220B7D9D002AD267 /* Services */,
 				3D802DA9220B47E3009A34B5 /* CoreFramework.h */,
 				3D802DAA220B47E3009A34B5 /* Info.plist */,
 			);
@@ -95,6 +131,7 @@
 				TargetAttributes = {
 					3D802DA5220B47E3009A34B5 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A198666220B7F7B002AD267 /* CodingUserInfoKey+Extension.swift in Sources */,
+				2A198664220B7ED0002AD267 /* StorageManager.swift in Sources */,
+				2A198662220B7EA2002AD267 /* JSONParser.swift in Sources */,
+				2A198660220B7E27002AD267 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +302,7 @@
 		3D802DAF220B47E3009A34B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xfinity.coreframework.CoreFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +329,7 @@
 		3D802DB0220B47E3009A34B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
