@@ -17,8 +17,8 @@ extension TheWireCharacter {
         return NSFetchRequest<TheWireCharacter>(entityName: "TheWireCharacter")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var text_description: String?
+    @NSManaged public var title: String
+    @NSManaged public var text_description: String
     @NSManaged public var url_image: String?
     @NSManaged public var is_favorite: Bool
 
