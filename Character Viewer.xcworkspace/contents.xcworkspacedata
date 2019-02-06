@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/isaiyepez/Documents/GitHub/JEI/Simpsons Character Viewer/Character Viewer.xcodeproj">
+      location = "group:/Users/isaiyepez/Documents/GitHub/JEI/Character Viewer/Character Viewer.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:CoreFramework/CoreFramework.xcodeproj">

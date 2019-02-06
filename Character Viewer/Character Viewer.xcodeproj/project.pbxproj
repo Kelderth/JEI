@@ -7,22 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D752902220B3C1700764F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D752901220B3C1700764F86 /* AppDelegate.swift */; };
-		3D752904220B3C1700764F86 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D752903220B3C1700764F86 /* FirstViewController.swift */; };
-		3D752906220B3C1700764F86 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D752905220B3C1700764F86 /* SecondViewController.swift */; };
-		3D752909220B3C1700764F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D752907220B3C1700764F86 /* Main.storyboard */; };
-		3D75290B220B3C1800764F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D75290A220B3C1800764F86 /* Assets.xcassets */; };
-		3D75290E220B3C1800764F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D75290C220B3C1800764F86 /* LaunchScreen.storyboard */; };
 		3D752943220B3E6000764F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D752942220B3E6000764F86 /* AppDelegate.swift */; };
 		3D752945220B3E6000764F86 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D752944220B3E6000764F86 /* FirstViewController.swift */; };
 		3D752947220B3E6000764F86 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D752946220B3E6000764F86 /* SecondViewController.swift */; };
 		3D75294A220B3E6000764F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D752948220B3E6000764F86 /* Main.storyboard */; };
 		3D75294C220B3E6100764F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D75294B220B3E6100764F86 /* Assets.xcassets */; };
 		3D75294F220B3E6100764F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D75294D220B3E6100764F86 /* LaunchScreen.storyboard */; };
+		3DE62FFD220B427B002DD2AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE62FFC220B427B002DD2AD /* AppDelegate.swift */; };
+		3DE62FFF220B427B002DD2AD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE62FFE220B427B002DD2AD /* FirstViewController.swift */; };
+		3DE63001220B427B002DD2AD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE63000220B427B002DD2AD /* SecondViewController.swift */; };
+		3DE63004220B427B002DD2AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE63002220B427B002DD2AD /* Main.storyboard */; };
+		3DE63007220B427B002DD2AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE63005220B427B002DD2AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D7528FE220B3C1700764F86 /* Character Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Character Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D752901220B3C1700764F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D752903220B3C1700764F86 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3D752905220B3C1700764F86 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +28,6 @@
 		3D75290A220B3C1800764F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D75290D220B3C1800764F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D75290F220B3C1800764F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D752923220B3C3800764F86 /* Simpsons Character Viewer copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Simpsons Character Viewer copy-Info.plist"; path = "/Users/isaiyepez/Documents/GitHub/JEI/Simpsons Character Viewer/Simpsons Character Viewer copy-Info.plist"; sourceTree = "<absolute>"; };
 		3D752940220B3E6000764F86 /* The Wire Character Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Wire Character Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D752942220B3E6000764F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D752944220B3E6000764F86 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -39,17 +36,24 @@
 		3D75294B220B3E6100764F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D75294E220B3E6100764F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D752950220B3E6100764F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE62FFA220B427B002DD2AD /* Simpsons Character Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simpsons Character Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE62FFC220B427B002DD2AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DE62FFE220B427B002DD2AD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		3DE63000220B427B002DD2AD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3DE63003220B427B002DD2AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DE63006220B427B002DD2AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DE63008220B427B002DD2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D7528FB220B3C1700764F86 /* Frameworks */ = {
+		3D75293D220B3E6000764F86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D75293D220B3E6000764F86 /* Frameworks */ = {
+		3DE62FF7220B427B002DD2AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,16 +68,16 @@
 			children = (
 				3D752900220B3C1700764F86 /* Simpsons Character Viewer */,
 				3D752941220B3E6000764F86 /* The Wire Character Viewer */,
+				3DE62FFB220B427B002DD2AD /* Simpsons Character Viewer */,
 				3D7528FF220B3C1700764F86 /* Products */,
-				3D752923220B3C3800764F86 /* Simpsons Character Viewer copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		3D7528FF220B3C1700764F86 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D7528FE220B3C1700764F86 /* Character Viewer.app */,
 				3D752940220B3E6000764F86 /* The Wire Character Viewer.app */,
+				3DE62FFA220B427B002DD2AD /* Simpsons Character Viewer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,26 +110,22 @@
 			path = "The Wire Character Viewer";
 			sourceTree = "<group>";
 		};
+		3DE62FFB220B427B002DD2AD /* Simpsons Character Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				3DE62FFC220B427B002DD2AD /* AppDelegate.swift */,
+				3DE62FFE220B427B002DD2AD /* FirstViewController.swift */,
+				3DE63000220B427B002DD2AD /* SecondViewController.swift */,
+				3DE63002220B427B002DD2AD /* Main.storyboard */,
+				3DE63005220B427B002DD2AD /* LaunchScreen.storyboard */,
+				3DE63008220B427B002DD2AD /* Info.plist */,
+			);
+			path = "Simpsons Character Viewer";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3D7528FD220B3C1700764F86 /* Character Viewer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3D752912220B3C1800764F86 /* Build configuration list for PBXNativeTarget "Character Viewer" */;
-			buildPhases = (
-				3D7528FA220B3C1700764F86 /* Sources */,
-				3D7528FB220B3C1700764F86 /* Frameworks */,
-				3D7528FC220B3C1700764F86 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Character Viewer";
-			productName = "Simpsons Character Viewer";
-			productReference = 3D7528FE220B3C1700764F86 /* Character Viewer.app */;
-			productType = "com.apple.product-type.application";
-		};
 		3D75293F220B3E6000764F86 /* The Wire Character Viewer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D752951220B3E6100764F86 /* Build configuration list for PBXNativeTarget "The Wire Character Viewer" */;
@@ -143,6 +143,23 @@
 			productReference = 3D752940220B3E6000764F86 /* The Wire Character Viewer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3DE62FF9220B427B002DD2AD /* Simpsons Character Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE63009220B427B002DD2AD /* Build configuration list for PBXNativeTarget "Simpsons Character Viewer" */;
+			buildPhases = (
+				3DE62FF6220B427B002DD2AD /* Sources */,
+				3DE62FF7220B427B002DD2AD /* Frameworks */,
+				3DE62FF8220B427B002DD2AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simpsons Character Viewer";
+			productName = "Simpsons Character Viewer";
+			productReference = 3DE62FFA220B427B002DD2AD /* Simpsons Character Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,10 +170,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Isai Yepez";
 				TargetAttributes = {
-					3D7528FD220B3C1700764F86 = {
+					3D75293F220B3E6000764F86 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					3D75293F220B3E6000764F86 = {
+					3DE62FF9220B427B002DD2AD = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -174,23 +191,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D7528FD220B3C1700764F86 /* Character Viewer */,
 				3D75293F220B3E6000764F86 /* The Wire Character Viewer */,
+				3DE62FF9220B427B002DD2AD /* Simpsons Character Viewer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3D7528FC220B3C1700764F86 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D75290E220B3C1800764F86 /* LaunchScreen.storyboard in Resources */,
-				3D75290B220B3C1800764F86 /* Assets.xcassets in Resources */,
-				3D752909220B3C1700764F86 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3D75293E220B3E6000764F86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,19 +208,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		3D7528FA220B3C1700764F86 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		3DE62FF8220B427B002DD2AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D752906220B3C1700764F86 /* SecondViewController.swift in Sources */,
-				3D752902220B3C1700764F86 /* AppDelegate.swift in Sources */,
-				3D752904220B3C1700764F86 /* FirstViewController.swift in Sources */,
+				3DE63004220B427B002DD2AD /* Main.storyboard in Resources */,
+				3DE63007220B427B002DD2AD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		3D75293C220B3E6000764F86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +227,16 @@
 				3D752947220B3E6000764F86 /* SecondViewController.swift in Sources */,
 				3D752943220B3E6000764F86 /* AppDelegate.swift in Sources */,
 				3D752945220B3E6000764F86 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE62FF6220B427B002DD2AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE63001220B427B002DD2AD /* SecondViewController.swift in Sources */,
+				3DE62FFD220B427B002DD2AD /* AppDelegate.swift in Sources */,
+				3DE62FFF220B427B002DD2AD /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +271,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				3D75294E220B3E6100764F86 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3DE63002220B427B002DD2AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE63003220B427B002DD2AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DE63005220B427B002DD2AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE63006220B427B002DD2AD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -378,42 +410,6 @@
 			};
 			name = Release;
 		};
-		3D752913220B3C1800764F86 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7EY6XT5B68;
-				INFOPLIST_FILE = "Simpsons Character Viewer/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xfinity.simpsonsviewer1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3D752914220B3C1800764F86 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7EY6XT5B68;
-				INFOPLIST_FILE = "Simpsons Character Viewer/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xfinity.simpsonsviewer1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		3D752952220B3E6100764F86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -450,6 +446,42 @@
 			};
 			name = Release;
 		};
+		3DE6300A220B427B002DD2AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EY6XT5B68;
+				INFOPLIST_FILE = "Simpsons Character Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xfinity.simpsonsviewer.Simpsons-Character-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DE6300B220B427B002DD2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EY6XT5B68;
+				INFOPLIST_FILE = "Simpsons Character Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xfinity.simpsonsviewer.Simpsons-Character-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -462,20 +494,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D752912220B3C1800764F86 /* Build configuration list for PBXNativeTarget "Character Viewer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D752913220B3C1800764F86 /* Debug */,
-				3D752914220B3C1800764F86 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3D752951220B3E6100764F86 /* Build configuration list for PBXNativeTarget "The Wire Character Viewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D752952220B3E6100764F86 /* Debug */,
 				3D752953220B3E6100764F86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE63009220B427B002DD2AD /* Build configuration list for PBXNativeTarget "Simpsons Character Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE6300A220B427B002DD2AD /* Debug */,
+				3DE6300B220B427B002DD2AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
