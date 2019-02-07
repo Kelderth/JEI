@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1463C0220CD11800BE1E0F /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D1463BF220CD11800BE1E0F /* Config.plist */; };
 		3D1AB042220B97BD0056C9C1 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */; };
 		3D802D73220B4705009A34B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D72220B4705009A34B5 /* AppDelegate.swift */; };
 		3D802D75220B4705009A34B5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D74220B4705009A34B5 /* FirstViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D1463BF220CD11800BE1E0F /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		3D802D70220B4705009A34B5 /* The Wire Character Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Wire Character Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D802D72220B4705009A34B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				3D802D7B220B4706009A34B5 /* Assets.xcassets */,
 				3D802D7D220B4706009A34B5 /* LaunchScreen.storyboard */,
 				3D802D80220B4706009A34B5 /* Info.plist */,
+				3D1463BF220CD11800BE1E0F /* Config.plist */,
 				3DCEEEB4220B4E720025B3B4 /* TheWireDataModel.xcdatamodeld */,
 			);
 			path = "The Wire Character Viewer";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1463C0220CD11800BE1E0F /* Config.plist in Resources */,
 				3D802D7F220B4706009A34B5 /* LaunchScreen.storyboard in Resources */,
 				3D802D7C220B4706009A34B5 /* Assets.xcassets in Resources */,
 				3D802D7A220B4705009A34B5 /* Main.storyboard in Resources */,
