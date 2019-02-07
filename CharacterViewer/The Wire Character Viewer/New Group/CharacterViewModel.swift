@@ -11,7 +11,7 @@ import CoreFramework
 
 class CharacterViewModel {
     
-    let config = parseConfig()
+    //let config = parseConfig()
     
     fileprivate var characters = [TheWireCharacter]() {
         didSet {
@@ -26,26 +26,52 @@ class CharacterViewModel {
         self.updateUI = callback
     }
     
-    func downloadCharacters() {
-        
-        let url = URL(string: config.urlString)
-        
-        NetworkManager.performRequest(for: url, httpMethod: .get) { (data, error) in
-            guard let data = data else { completion(nil); return }
+    func loadPersistedCharacters() {
+        let fetchRequest: NSFetchRequest<TheWireCharacter> = TheWireCharacter.fetchRequest()
+        do{
+//            let charactersPersisted = try StorageManager.context.fetch(fetchRequest)
+//
+//                self.characters = charactersPersisted
             
-            
-            do {
-                
-                let charactersDecoded = try JSONDecoder().decode(Products.self, from: data)
-                self.characters = productListDecoded.products
-                
-                completion(charactersDecoded)
-                
-            } catch let jsonErr {
-                print("Error serializing json: ", jsonErr)
-                completion(nil)
-            }
+        } catch {
+            self.characters = []
         }
+    
+    }
+    
+    func fetchCharacters() {
+        
+        self.downloadCharacters() { [weak self] (_) in
+            self?.updateCharacters()
+        }
+    }
+    
+    private func updateCharacters() {
+        StorageManager.saveContext()
+        self.loadPersistedCharacters()
+    }
+    
+    func downloadCharacters(completion: @escaping ([TheWireCharacter]) -> Void) {
+        
+        
+//        let url = URL(string: config.urlString)
+//
+//        NetworkManager.performRequest(for: url, httpMethod: .get) { (data, error) in
+//            guard let data = data else { completion(nil); return }
+//
+//
+//            do {
+//
+//                let charactersDecoded = try JSONDecoder().decode(Products.self, from: data)
+//                self.characters = productListDecoded.products
+//
+//                completion(charactersDecoded)
+//
+//            } catch let jsonErr {
+//                print("Error serializing json: ", jsonErr)
+//                completion(nil)
+//            }
+//        }
     }
     
     func parseConfig() -> Config {
