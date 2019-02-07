@@ -10,6 +10,8 @@ import CoreData
 import CoreFramework
 
 class FirstViewController: UIViewController {
+
+    @IBOutlet weak var favoriteButton: UIButton!
     var characters = [TheWireCharacter]()
     
     /// Parses the Config.plist configuration where the App Name, URL String and Data Model names are
@@ -53,5 +55,20 @@ class FirstViewController: UIViewController {
         characters.append(char1)
         
         StorageManager.saveContext()
+    }
+    
+    @IBAction func Favorite(_ sender: UIButton) {
+        var isFavorited: Bool = true
+        
+        
+        if isFavorited == true {
+            favoriteButton.setImage(UIImage(imageLiteralResourceName: "favoriteOn"), for: .normal)
+            isFavorited = false
+        }
+        else {
+            favoriteButton.setImage(UIImage(imageLiteralResourceName: "favoriteOff"), for: .normal)
+            isFavorited = true
+        }
+        print("Favorited!")
     }
 }
