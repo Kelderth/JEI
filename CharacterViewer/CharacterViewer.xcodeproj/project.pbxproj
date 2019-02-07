@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1AB042220B97BD0056C9C1 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */; };
 		3D802D73220B4705009A34B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D72220B4705009A34B5 /* AppDelegate.swift */; };
 		3D802D75220B4705009A34B5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D74220B4705009A34B5 /* FirstViewController.swift */; };
 		3D802D77220B4705009A34B5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D76220B4705009A34B5 /* SecondViewController.swift */; };
@@ -23,12 +24,12 @@
 		3DCEEEBD220B53D30025B3B4 /* SimpsonsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DCEEEBB220B53D30025B3B4 /* SimpsonsDataModel.xcdatamodeld */; };
 		3DCEEEC4220B56960025B3B4 /* SimpsonsCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCEEEC2220B56960025B3B4 /* SimpsonsCharacter+CoreDataClass.swift */; };
 		3DCEEEC5220B56960025B3B4 /* SimpsonsCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCEEEC3220B56960025B3B4 /* SimpsonsCharacter+CoreDataProperties.swift */; };
-		3DCEEEC9220B58870025B3B4 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCEEEC8220B58870025B3B4 /* PersistanceService.swift */; };
 		3DCEEECD220B6CC90025B3B4 /* TheWireCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCEEECB220B6CC90025B3B4 /* TheWireCharacter+CoreDataClass.swift */; };
 		3DCEEECE220B6CC90025B3B4 /* TheWireCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCEEECC220B6CC90025B3B4 /* TheWireCharacter+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		3D802D70220B4705009A34B5 /* The Wire Character Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Wire Character Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D802D72220B4705009A34B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D802D74220B4705009A34B5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		3DCEEEBC220B53D30025B3B4 /* SimpsonsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpsonsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		3DCEEEC2220B56960025B3B4 /* SimpsonsCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SimpsonsCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3DCEEEC3220B56960025B3B4 /* SimpsonsCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SimpsonsCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3DCEEEC8220B58870025B3B4 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		3DCEEECB220B6CC90025B3B4 /* TheWireCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheWireCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3DCEEECC220B6CC90025B3B4 /* TheWireCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheWireCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,10 +72,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D1AB043220B97C20056C9C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */,
+			);
+			name = ViewModel;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3D802D4C220B469F009A34B5 = {
 			isa = PBXGroup;
 			children = (
-				3DCEEECA220B58CA0025B3B4 /* Services */,
 				3D802D71220B4705009A34B5 /* The Wire Character Viewer */,
 				3D802D89220B4775009A34B5 /* Simpsons Character Viewer */,
 				3D802D56220B469F009A34B5 /* Products */,
@@ -94,6 +102,7 @@
 		3D802D71220B4705009A34B5 /* The Wire Character Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				3D1AB043220B97C20056C9C1 /* ViewModel */,
 				3DCEEEC7220B56DC0025B3B4 /* Model */,
 				3D802D72220B4705009A34B5 /* AppDelegate.swift */,
 				3D802D74220B4705009A34B5 /* FirstViewController.swift */,
@@ -139,14 +148,6 @@
 				3DCEEECC220B6CC90025B3B4 /* TheWireCharacter+CoreDataProperties.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		3DCEEECA220B58CA0025B3B4 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				3DCEEEC8220B58870025B3B4 /* PersistanceService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,11 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DCEEECE220B6CC90025B3B4 /* TheWireCharacter+CoreDataProperties.swift in Sources */,
+				3D1AB042220B97BD0056C9C1 /* CharacterViewModel.swift in Sources */,
 				3DCEEEB6220B4E720025B3B4 /* TheWireDataModel.xcdatamodeld in Sources */,
 				3D802D77220B4705009A34B5 /* SecondViewController.swift in Sources */,
 				3DCEEECD220B6CC90025B3B4 /* TheWireCharacter+CoreDataClass.swift in Sources */,
 				3D802D73220B4705009A34B5 /* AppDelegate.swift in Sources */,
-				3DCEEEC9220B58870025B3B4 /* PersistanceService.swift in Sources */,
 				3D802D75220B4705009A34B5 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
