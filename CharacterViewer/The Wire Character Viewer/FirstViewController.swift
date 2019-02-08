@@ -14,6 +14,9 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var favoriteButton: UIButton!
     var characters = [TheWireCharacter]()
     
+    var viewModel: CharacterViewModel!
+    
+    
     /// Parses the Config.plist configuration where the App Name, URL String and Data Model names are
     ///
     /// - Returns: A Config object
@@ -30,9 +33,11 @@ class FirstViewController: UIViewController {
         let config = parseConfig()
         print(config.appName)
         StorageManager.dataModel = config.dataModel
+        viewModel = CharacterViewModel()
+        viewModel.fetchCharacters()
         
-        fetchData()
-        addCharacter()
+//        fetchData()
+//        addCharacter()
     }
     
     func fetchData() {
