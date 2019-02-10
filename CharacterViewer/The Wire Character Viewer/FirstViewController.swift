@@ -12,7 +12,14 @@ import CoreFramework
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var characterImage: UIImageView!
+    @IBOutlet weak var characterNameLabel: UILabel!
+    @IBOutlet weak var characterDescriptionLabel: UILabel!
     var characters = [TheWireCharacter]()
+    
+    let vm = CharacterViewModel()
+    
+    var characterIndex: Int = 0
     
     /// Parses the Config.plist configuration where the App Name, URL String and Data Model names are
     ///
@@ -33,6 +40,7 @@ class FirstViewController: UIViewController {
         
         fetchData()
         addCharacter()
+        updateLabel()
     }
     
     func fetchData() {
@@ -57,6 +65,13 @@ class FirstViewController: UIViewController {
         StorageManager.saveContext()
     }
     
+    func updateLabel(){
+        characterNameLabel.text = vm.title(index: characterIndex)
+//        characterDescriptionLabel.text = vm.textDescription(index: characterIndex!)
+//        characterImage.image = vm.image(index: characterIndex)
+        print(characterIndex)
+    }
+    
     @IBAction func Favorite(_ sender: UIButton) {
         var isFavorited: Bool = true
         
@@ -66,8 +81,8 @@ class FirstViewController: UIViewController {
             isFavorited = false
         }
         else {
-            favoriteButton.setImage(UIImage(imageLiteralResourceName: "favoriteOff"), for: .normal)
-            isFavorited = true
+//            favoriteButton.setImage(UIImage(imageLiteralResourceName: "favoriteOff"), for: .normal)
+//            isFavorited = true
         }
         print("Favorited!")
     }

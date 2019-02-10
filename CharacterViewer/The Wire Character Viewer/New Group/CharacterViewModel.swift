@@ -13,18 +13,9 @@ class CharacterViewModel {
     
     //let config = parseConfig()
     
-    fileprivate var characters = [TheWireCharacter]() {
-        didSet {
-            self.updateUI?()
-        }
-    }
+    fileprivate var characters = [TheWireCharacter]()
     
-    private let updateUI: (()->())?
     private let baseUrl: String = "http://api.duckduckgo.com/?q=the+wire+characters&format=json"
-    
-    init(callback: (()->())?) {
-        self.updateUI = callback
-    }
     
     func loadPersistedCharacters() {
         let fetchRequest: NSFetchRequest<TheWireCharacter> = TheWireCharacter.fetchRequest()
@@ -88,7 +79,8 @@ class CharacterViewModel {
     }
     
     func title(index: Int) -> String {
-        return self.characters[index].title
+//        return self.characters[index].title
+        return "JEI"
     }
     
     func textDescription(index: Int) -> String {

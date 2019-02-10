@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040D4B6E220E9A6800106F1B /* CharactersTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B6D220E9A6800106F1B /* CharactersTableViewHeaderFooterView.swift */; };
+		040D4B70220E9AD500106F1B /* CharactersTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040D4B6F220E9AD500106F1B /* CharactersTableViewHeaderFooterView.xib */; };
 		04B8CAFB220CD4F800B870FB /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CAFA220CD4F800B870FB /* MasterTableViewController.swift */; };
+		04B8CAFD220CDBCE00B870FB /* CharacterCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CAFC220CDBCE00B870FB /* CharacterCellTableViewCell.swift */; };
 		3D1463C0220CD11800BE1E0F /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D1463BF220CD11800BE1E0F /* Config.plist */; };
 		3D1AB042220B97BD0056C9C1 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */; };
 		3D802D73220B4705009A34B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D72220B4705009A34B5 /* AppDelegate.swift */; };
@@ -32,7 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040D4B6D220E9A6800106F1B /* CharactersTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		040D4B6F220E9AD500106F1B /* CharactersTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
 		04B8CAFA220CD4F800B870FB /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		04B8CAFC220CDBCE00B870FB /* CharacterCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellTableViewCell.swift; sourceTree = "<group>"; };
 		3D1463BF220CD11800BE1E0F /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		3D802D70220B4705009A34B5 /* The Wire Character Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Wire Character Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,9 @@
 				3D802D76220B4705009A34B5 /* SecondViewController.swift */,
 				04B8CAFA220CD4F800B870FB /* MasterTableViewController.swift */,
 				3D802D78220B4705009A34B5 /* Main.storyboard */,
+				040D4B6D220E9A6800106F1B /* CharactersTableViewHeaderFooterView.swift */,
+				040D4B6F220E9AD500106F1B /* CharactersTableViewHeaderFooterView.xib */,
+				04B8CAFC220CDBCE00B870FB /* CharacterCellTableViewCell.swift */,
 				3D802D7B220B4706009A34B5 /* Assets.xcassets */,
 				3D802D7D220B4706009A34B5 /* LaunchScreen.storyboard */,
 				3D802D80220B4706009A34B5 /* Info.plist */,
@@ -239,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1463C0220CD11800BE1E0F /* Config.plist in Resources */,
+				040D4B70220E9AD500106F1B /* CharactersTableViewHeaderFooterView.xib in Resources */,
 				3D802D7F220B4706009A34B5 /* LaunchScreen.storyboard in Resources */,
 				3D802D7C220B4706009A34B5 /* Assets.xcassets in Resources */,
 				3D802D7A220B4705009A34B5 /* Main.storyboard in Resources */,
@@ -267,9 +277,11 @@
 				3DCEEEB6220B4E720025B3B4 /* TheWireDataModel.xcdatamodeld in Sources */,
 				3D802D77220B4705009A34B5 /* SecondViewController.swift in Sources */,
 				04B8CAFB220CD4F800B870FB /* MasterTableViewController.swift in Sources */,
+				040D4B6E220E9A6800106F1B /* CharactersTableViewHeaderFooterView.swift in Sources */,
 				3DCEEECD220B6CC90025B3B4 /* TheWireCharacter+CoreDataClass.swift in Sources */,
 				3DAB93A2220CCE6300B23ACA /* Config.swift in Sources */,
 				3D802D73220B4705009A34B5 /* AppDelegate.swift in Sources */,
+				04B8CAFD220CDBCE00B870FB /* CharacterCellTableViewCell.swift in Sources */,
 				3D802D75220B4705009A34B5 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
