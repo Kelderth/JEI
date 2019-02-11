@@ -13,12 +13,7 @@ class CharacterViewModel {
     
     fileprivate var characters = [TheWireCharacter]()
     
-<<<<<<< HEAD
-    fileprivate var characters = [TheWireCharacter]()
-    
-=======
->>>>>>> 98a6f8695b30e066a1fdfc1c479d5a9554b0281b
-    private let baseUrl: String = "http://api.duckduckgo.com/?q=the+wire+characters&format=json"
+    private let baseUrl: String = "https://api.duckduckgo.com/"
     
     func loadPersistedCharacters() {
         let fetchRequest: NSFetchRequest<TheWireCharacter> = TheWireCharacter.fetchRequest()
@@ -44,18 +39,20 @@ class CharacterViewModel {
     func downloadCharacters(completion: @escaping ([TheWireCharacter]) -> Void) {
         let config = parseConfig()
         if let url = URL(string: config.urlString) {
-            NetworkManager.performRequest(for: url, httpMethod: .get) { (unsafedata, error) in
+            let urlParams: [String : String] = ["q" : "the+wire+characters", "format" : "json"]
+            
+            NetworkManager.performRequest(for: url, httpMethod: .get, urlParameters: urlParams) { (unsafedata, error) in
                 guard let data = unsafedata else { completion([]); return }
                 
-                let charactersDecoded = JSONParser.decode(json: data, as: TheWireCharacterDecoder.self)!
+                let charactersDecoded = JSONParser.decode(json: data, as: TWCharacters.self)!
                 var charactersCD = [TheWireCharacter]()
                 
-                for character in charactersDecoded.relatedTopics {
+                for character in charactersDecoded.characterArray {
                     let cdCharacter = TheWireCharacter()
                     
-                    cdCharacter.title = self.getText(text: character.text, element: 0)
-                    cdCharacter.url_image = character.icon.url
-                    cdCharacter.text_description = self.getText(text: character.text, element: 1)
+                    cdCharacter.title = self.getText(text: character.description, element: 0)
+                    cdCharacter.url_image = character.imageURL
+                    cdCharacter.text_description = self.getText(text: character.description, element: 1)
                     
                     charactersCD.append(cdCharacter)
                 }

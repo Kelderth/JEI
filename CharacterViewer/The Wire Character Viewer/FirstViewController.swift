@@ -17,7 +17,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var characterDescriptionLabel: UILabel!
     var characters = [TheWireCharacter]()
     
-    let vm = CharacterViewModel()
+    var vm = CharacterViewModel()
     
     var characterIndex: Int = 0
     
@@ -37,8 +37,8 @@ class FirstViewController: UIViewController {
         let config = parseConfig()
         print(config.appName)
         StorageManager.dataModel = config.dataModel
-        viewModel = CharacterViewModel()
-        viewModel.fetchCharacters()
+        vm = CharacterViewModel()
+        vm.fetchCharacters()
         
         fetchData()
         addCharacter()
