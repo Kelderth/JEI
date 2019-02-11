@@ -11,27 +11,26 @@ import CoreFramework
 
 class CharacterViewModel {
     
-    //let config = parseConfig()
-    
     fileprivate var characters = [TheWireCharacter]()
     
+<<<<<<< HEAD
+    fileprivate var characters = [TheWireCharacter]()
+    
+=======
+>>>>>>> 98a6f8695b30e066a1fdfc1c479d5a9554b0281b
     private let baseUrl: String = "http://api.duckduckgo.com/?q=the+wire+characters&format=json"
     
     func loadPersistedCharacters() {
         let fetchRequest: NSFetchRequest<TheWireCharacter> = TheWireCharacter.fetchRequest()
-        do{
-//            let charactersPersisted = try StorageManager.context.fetch(fetchRequest)
-//
-//                self.characters = charactersPersisted
-            
+        do {
+            let charactersPersisted = try StorageManager.persistentContainer.viewContext.fetch(fetchRequest)
+            self.characters = charactersPersisted
         } catch {
             self.characters = []
         }
-    
     }
     
     func fetchCharacters() {
-        
         self.downloadCharacters() { [weak self] (_) in
             self?.updateCharacters()
         }
@@ -43,27 +42,36 @@ class CharacterViewModel {
     }
     
     func downloadCharacters(completion: @escaping ([TheWireCharacter]) -> Void) {
-        
-        
-//        let url = URL(string: config.urlString)
-//
-//        NetworkManager.performRequest(for: url, httpMethod: .get) { (data, error) in
-//            guard let data = data else { completion(nil); return }
-//
-//
-//            do {
-//
-//                let charactersDecoded = try JSONDecoder().decode(Products.self, from: data)
-//                self.characters = productListDecoded.products
-//
-//                completion(charactersDecoded)
-//
-//            } catch let jsonErr {
-//                print("Error serializing json: ", jsonErr)
-//                completion(nil)
-//            }
-//        }
+        let config = parseConfig()
+        if let url = URL(string: config.urlString) {
+            NetworkManager.performRequest(for: url, httpMethod: .get) { (unsafedata, error) in
+                guard let data = unsafedata else { completion([]); return }
+                
+                let charactersDecoded = JSONParser.decode(json: data, as: TheWireCharacterDecoder.self)!
+                var charactersCD = [TheWireCharacter]()
+                
+                for character in charactersDecoded.relatedTopics {
+                    let cdCharacter = TheWireCharacter()
+                    
+                    cdCharacter.title = self.getText(text: character.text, element: 0)
+                    cdCharacter.url_image = character.icon.url
+                    cdCharacter.text_description = self.getText(text: character.text, element: 1)
+                    
+                    charactersCD.append(cdCharacter)
+                }
+                completion(charactersCD)
+            }
+        }
     }
+    
+    private func getText(text: String, element: Int) -> String {
+        let result = text.split(separator: "-")[element]
+        if element == 0 {
+            return String(result.split(separator: "(")[0])
+        }
+        return String(result)
+    }
+    
     
     func parseConfig() -> Config {
         let url = Bundle.main.url(forResource: "Config", withExtension: "plist")!

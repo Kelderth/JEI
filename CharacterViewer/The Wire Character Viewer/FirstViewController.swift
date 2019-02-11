@@ -37,6 +37,8 @@ class FirstViewController: UIViewController {
         let config = parseConfig()
         print(config.appName)
         StorageManager.dataModel = config.dataModel
+        viewModel = CharacterViewModel()
+        viewModel.fetchCharacters()
         
         fetchData()
         addCharacter()

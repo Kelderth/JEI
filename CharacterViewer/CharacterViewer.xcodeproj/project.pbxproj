@@ -17,6 +17,7 @@
 		044639E222110E9F0071F49D /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044639E122110E9F0071F49D /* FavoriteTableViewCell.swift */; };
 		04B8CAFD220CDBCE00B870FB /* CharacterCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CAFC220CDBCE00B870FB /* CharacterCellTableViewCell.swift */; };
 		3D1463C0220CD11800BE1E0F /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D1463BF220CD11800BE1E0F /* Config.plist */; };
+		3D156CCE220CDE4200B28C53 /* TheWireCharacterDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D156CCD220CDE4200B28C53 /* TheWireCharacterDecoder.swift */; };
 		3D1AB042220B97BD0056C9C1 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */; };
 		3D802D73220B4705009A34B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D72220B4705009A34B5 /* AppDelegate.swift */; };
 		3D802D75220B4705009A34B5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D74220B4705009A34B5 /* FirstViewController.swift */; };
@@ -50,6 +51,7 @@
 		044639E122110E9F0071F49D /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		04B8CAFC220CDBCE00B870FB /* CharacterCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellTableViewCell.swift; sourceTree = "<group>"; };
 		3D1463BF220CD11800BE1E0F /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		3D156CCD220CDE4200B28C53 /* TheWireCharacterDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheWireCharacterDecoder.swift; sourceTree = "<group>"; };
 		3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		3D802D70220B4705009A34B5 /* The Wire Character Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Wire Character Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D802D72220B4705009A34B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				3DAB93A1220CCE6300B23ACA /* Config.swift */,
 				3DCEEECB220B6CC90025B3B4 /* TheWireCharacter+CoreDataClass.swift */,
 				3DCEEECC220B6CC90025B3B4 /* TheWireCharacter+CoreDataProperties.swift */,
+				3D156CCD220CDE4200B28C53 /* TheWireCharacterDecoder.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				3D802D77220B4705009A34B5 /* FavoriteViewController.swift in Sources */,
 				040D4B792210A53000106F1B /* CharacterCollectionViewCell.swift in Sources */,
 				040D4B6E220E9A6800106F1B /* CharactersTableViewHeaderFooterView.swift in Sources */,
+				3D156CCE220CDE4200B28C53 /* TheWireCharacterDecoder.swift in Sources */,
 				3DCEEECD220B6CC90025B3B4 /* TheWireCharacter+CoreDataClass.swift in Sources */,
 				3DAB93A2220CCE6300B23ACA /* Config.swift in Sources */,
 				040D4B72220FE38D00106F1B /* MasterViewController.swift in Sources */,
