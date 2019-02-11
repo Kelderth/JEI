@@ -13,22 +13,50 @@
         <!--Favorites-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="The_Wire_Character_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="FavoriteViewController" customModule="The_Wire_Character_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7CO-gB-Fe5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7CO-gB-Fe5">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="80" id="Yrf-6j-aq8">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Yrf-6j-aq8" customClass="FavoriteTableViewCell" customModule="The_Wire_Character_Viewer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yrf-6j-aq8" id="Pab-sM-BDZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dwj-Hq-ZR9">
+                                                    <rect key="frame" x="10" y="5" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="dwj-Hq-ZR9" secondAttribute="height" multiplier="1:1" id="0YB-ey-sMh"/>
+                                                        <constraint firstAttribute="width" constant="90" id="G8r-hO-Yv5"/>
+                                                        <constraint firstAttribute="height" constant="90" id="WaR-63-exN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U65-Qw-10j">
+                                                    <rect key="frame" x="110" y="5" width="255" height="89.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dwj-Hq-ZR9" firstAttribute="top" secondItem="Pab-sM-BDZ" secondAttribute="top" constant="5" id="0Bs-5E-bzj"/>
+                                                <constraint firstAttribute="trailing" secondItem="U65-Qw-10j" secondAttribute="trailing" constant="10" id="Fly-QH-pTz"/>
+                                                <constraint firstItem="dwj-Hq-ZR9" firstAttribute="leading" secondItem="Pab-sM-BDZ" secondAttribute="leading" constant="10" id="QxB-HW-4jc"/>
+                                                <constraint firstItem="U65-Qw-10j" firstAttribute="leading" secondItem="dwj-Hq-ZR9" secondAttribute="trailing" constant="10" id="RMt-pF-DDV"/>
+                                                <constraint firstItem="U65-Qw-10j" firstAttribute="top" secondItem="Pab-sM-BDZ" secondAttribute="top" constant="5" id="UVu-Gw-0Pn"/>
+                                                <constraint firstAttribute="bottom" secondItem="U65-Qw-10j" secondAttribute="bottom" constant="5" id="uwE-5L-W60"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="characterImageView" destination="dwj-Hq-ZR9" id="nb7-ZJ-t0N"/>
+                                            <outlet property="characterNameLabel" destination="U65-Qw-10j" id="Q9c-kD-uWR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -43,6 +71,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="DJ9-ir-6Qw"/>
+                    <connections>
+                        <outlet property="tableView" destination="7CO-gB-Fe5" id="ZO8-VY-9YZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -313,7 +344,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gax-Zm-98z">
                                                     <rect key="frame" x="10" y="5" width="355" height="33.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

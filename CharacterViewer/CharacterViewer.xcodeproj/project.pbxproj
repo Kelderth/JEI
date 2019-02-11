@@ -14,12 +14,13 @@
 		040D4B762210990700106F1B /* CharactersGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B752210990700106F1B /* CharactersGalleryViewController.swift */; };
 		040D4B792210A53000106F1B /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4B772210A52F00106F1B /* CharacterCollectionViewCell.swift */; };
 		040D4B7A2210A53000106F1B /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040D4B782210A52F00106F1B /* CharacterCollectionViewCell.xib */; };
+		044639E222110E9F0071F49D /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044639E122110E9F0071F49D /* FavoriteTableViewCell.swift */; };
 		04B8CAFD220CDBCE00B870FB /* CharacterCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CAFC220CDBCE00B870FB /* CharacterCellTableViewCell.swift */; };
 		3D1463C0220CD11800BE1E0F /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D1463BF220CD11800BE1E0F /* Config.plist */; };
 		3D1AB042220B97BD0056C9C1 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */; };
 		3D802D73220B4705009A34B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D72220B4705009A34B5 /* AppDelegate.swift */; };
 		3D802D75220B4705009A34B5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D74220B4705009A34B5 /* FirstViewController.swift */; };
-		3D802D77220B4705009A34B5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D76220B4705009A34B5 /* SecondViewController.swift */; };
+		3D802D77220B4705009A34B5 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D802D76220B4705009A34B5 /* FavoriteViewController.swift */; };
 		3D802D7A220B4705009A34B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D802D78220B4705009A34B5 /* Main.storyboard */; };
 		3D802D7C220B4706009A34B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D802D7B220B4706009A34B5 /* Assets.xcassets */; };
 		3D802D7F220B4706009A34B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D802D7D220B4706009A34B5 /* LaunchScreen.storyboard */; };
@@ -46,13 +47,14 @@
 		040D4B752210990700106F1B /* CharactersGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersGalleryViewController.swift; sourceTree = "<group>"; };
 		040D4B772210A52F00106F1B /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		040D4B782210A52F00106F1B /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
+		044639E122110E9F0071F49D /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		04B8CAFC220CDBCE00B870FB /* CharacterCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellTableViewCell.swift; sourceTree = "<group>"; };
 		3D1463BF220CD11800BE1E0F /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		3D1AB041220B97BD0056C9C1 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		3D802D70220B4705009A34B5 /* The Wire Character Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Wire Character Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D802D72220B4705009A34B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D802D74220B4705009A34B5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		3D802D76220B4705009A34B5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3D802D76220B4705009A34B5 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		3D802D79220B4705009A34B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D802D7B220B4706009A34B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D802D7E220B4706009A34B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,7 +128,8 @@
 				3DCEEEC7220B56DC0025B3B4 /* Model */,
 				3D802D72220B4705009A34B5 /* AppDelegate.swift */,
 				3D802D74220B4705009A34B5 /* FirstViewController.swift */,
-				3D802D76220B4705009A34B5 /* SecondViewController.swift */,
+				3D802D76220B4705009A34B5 /* FavoriteViewController.swift */,
+				044639E122110E9F0071F49D /* FavoriteTableViewCell.swift */,
 				040D4B71220FE38C00106F1B /* MasterViewController.swift */,
 				3D802D78220B4705009A34B5 /* Main.storyboard */,
 				040D4B732210879400106F1B /* CharactersListViewController.swift */,
@@ -289,8 +292,9 @@
 				040D4B762210990700106F1B /* CharactersGalleryViewController.swift in Sources */,
 				3DCEEECE220B6CC90025B3B4 /* TheWireCharacter+CoreDataProperties.swift in Sources */,
 				3D1AB042220B97BD0056C9C1 /* CharacterViewModel.swift in Sources */,
+				044639E222110E9F0071F49D /* FavoriteTableViewCell.swift in Sources */,
 				3DCEEEB6220B4E720025B3B4 /* TheWireDataModel.xcdatamodeld in Sources */,
-				3D802D77220B4705009A34B5 /* SecondViewController.swift in Sources */,
+				3D802D77220B4705009A34B5 /* FavoriteViewController.swift in Sources */,
 				040D4B792210A53000106F1B /* CharacterCollectionViewCell.swift in Sources */,
 				040D4B6E220E9A6800106F1B /* CharactersTableViewHeaderFooterView.swift in Sources */,
 				3DCEEECD220B6CC90025B3B4 /* TheWireCharacter+CoreDataClass.swift in Sources */,
