@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterDescriptionLabel: UILabel!
-    var characters = [TheWireCharacter]()
+    var characters = [TWCharacter]()
     
     var vm = CharacterViewModel()
     
@@ -40,38 +40,44 @@ class FirstViewController: UIViewController {
         vm = CharacterViewModel()
         vm.fetchCharacters()
         
+        
+        updateLabel()
         fetchData()
         addCharacter()
-        updateLabel()
+        
     }
     
     func fetchData() {
-        let fetchRequest = NSFetchRequest<TheWireCharacter>(entityName: "TheWireCharacter")
-        do {
-            let characters = try StorageManager.persistentContainer.viewContext.fetch(fetchRequest)
-            self.characters = characters
-        } catch {
-            print("Error fetching data from context \(error)")
-        }
+//        let fetchRequest = NSFetchRequest<TheWireCharacter>(entityName: "TheWireCharacter")
+//        do {
+//            let characters = try StorageManager.persistentContainer.viewContext.fetch(fetchRequest)
+//            self.characters = characters
+//        } catch {
+//            print("Error fetching data from context \(error)")
+//        }
     }
     
     func addCharacter() {
-        let char1 = TheWireCharacter(context: StorageManager.persistentContainer.viewContext)
+//        let char1 = TheWireCharacter(context: StorageManager.persistentContainer.viewContext)
         
-        char1.title = "test1"
-        char1.is_favorite = false
-        char1.text_description = "test111"
-        
-        characters.append(char1)
-        
-        StorageManager.saveContext()
+//        char1.title = "test1"
+//        char1.is_favorite = false
+//        char1.text_description = "test111"
+//
+//        characters.append(char1)
+//
+//        StorageManager.saveContext()
     }
     
     func updateLabel(){
-        characterNameLabel.text = vm.title(index: characterIndex)
-//        characterDescriptionLabel.text = vm.textDescription(index: characterIndex!)
-//        characterImage.image = vm.image(index: characterIndex)
-        self.navigationItem.title = vm.title(index: characterIndex)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            self.characterNameLabel.text = self.vm.title(index: self.characterIndex)
+            self.characterDescriptionLabel.text = self.vm.textDescription(index: self.characterIndex)
+            //        characterImage.image = vm.image(index: characterIndex)
+            self.navigationItem.title = self.vm.title(index: self.characterIndex)
+        })
+        
     }
     
     @IBAction func Favorite(_ sender: UIButton) {

@@ -11,32 +11,32 @@ import CoreFramework
 
 class CharacterViewModel {
     
-    fileprivate var characters = [TheWireCharacter]()
+    fileprivate var characters = [TWCharacter]()
     
     private let baseUrl: String = "https://api.duckduckgo.com/"
     
     func loadPersistedCharacters() {
-        let fetchRequest: NSFetchRequest<TheWireCharacter> = TheWireCharacter.fetchRequest()
-        do {
-            let charactersPersisted = try StorageManager.persistentContainer.viewContext.fetch(fetchRequest)
-            self.characters = charactersPersisted
-        } catch {
-            self.characters = []
-        }
+//        let fetchRequest: NSFetchRequest<TheWireCharacter> = TheWireCharacter.fetchRequest()
+//        do {
+//            let charactersPersisted = try StorageManager.persistentContainer.viewContext.fetch(fetchRequest)
+//            self.characters = charactersPersisted
+//        } catch {
+//            self.characters = []
+//        }
     }
     
     func fetchCharacters() {
         self.downloadCharacters() { [weak self] (_) in
-            self?.updateCharacters()
+            //self?.updateCharacters()
         }
     }
     
     private func updateCharacters() {
-        StorageManager.saveContext()
-        self.loadPersistedCharacters()
+//        StorageManager.saveContext()
+//        self.loadPersistedCharacters()
     }
     
-    func downloadCharacters(completion: @escaping ([TheWireCharacter]) -> Void) {
+    func downloadCharacters(completion: @escaping ([TWCharacter]) -> Void) {
         let config = parseConfig()
         if let url = URL(string: config.urlString) {
             let urlParams: [String : String] = ["q" : "the+wire+characters", "format" : "json"]
@@ -45,18 +45,18 @@ class CharacterViewModel {
                 guard let data = unsafedata else { completion([]); return }
                 
                 let charactersDecoded = JSONParser.decode(json: data, as: TWCharacters.self)!
-                var charactersCD = [TheWireCharacter]()
+                //var charactersCD = [TheWireCharacter]()
                 
                 for character in charactersDecoded.characterArray {
-                    let cdCharacter = TheWireCharacter()
+//                    let cdCharacter = TheWireCharacter()
+//
+//                    cdCharacter.title = self.getText(text: character.description, element: 0)
+//                    cdCharacter.url_image = character.imageURL
+//                    cdCharacter.text_description = self.getText(text: character.description, element: 1)
                     
-                    cdCharacter.title = self.getText(text: character.description, element: 0)
-                    cdCharacter.url_image = character.imageURL
-                    cdCharacter.text_description = self.getText(text: character.description, element: 1)
-                    
-                    charactersCD.append(cdCharacter)
+                    self.characters.append(character)
                 }
-                completion(charactersCD)
+                completion(self.characters)
             }
         }
     }
@@ -84,19 +84,18 @@ class CharacterViewModel {
     }
     
     func title(index: Int) -> String {
-//        return self.characters[index].title
-        return "JEI"
+        return "TWC"//self.getText(text: self.characters[index].description, element: 0)
     }
     
     func textDescription(index: Int) -> String {
-        return self.characters[index].text_description
+        return self.getText(text: self.characters[index].description, element: 1)
     }
     
     func urlImage(index: Int) -> String {
-        return self.characters[index].url_image ?? "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+        return self.characters[index].imageURL ?? "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
     }
     
     func isFavorite(index: Int) -> Bool {
-        return self.characters[index].is_favorite
+        return self.characters[index].isFavorite
     }
 }

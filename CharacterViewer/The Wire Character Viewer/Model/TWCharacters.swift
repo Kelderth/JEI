@@ -22,8 +22,9 @@ struct TWCharacters: Decodable {
 }
 struct TWCharacter: Decodable  {
     
-    let imageURL: String
+    let imageURL: String?
     let description: String
+    var isFavorite = false
     
     init(from decoder: Decoder) throws {
         
