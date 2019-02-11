@@ -69,7 +69,7 @@ class FirstViewController: UIViewController {
         characterNameLabel.text = vm.title(index: characterIndex)
 //        characterDescriptionLabel.text = vm.textDescription(index: characterIndex!)
 //        characterImage.image = vm.image(index: characterIndex)
-        print(characterIndex)
+        self.navigationItem.title = vm.title(index: characterIndex)
     }
     
     @IBAction func Favorite(_ sender: UIButton) {

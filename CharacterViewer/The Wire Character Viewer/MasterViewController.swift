@@ -25,6 +25,10 @@ class MasterViewController: UIViewController, UISplitViewControllerDelegate {
     
     // Config the master view controller(The table view) as the first thing to see in phone mode.
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        
+        if primaryViewController == collectionViewContainer || primaryViewController == TableViewContainer {
+            return true
+        }
         return true
     }
     
