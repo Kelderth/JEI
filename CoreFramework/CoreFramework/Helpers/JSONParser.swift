@@ -9,7 +9,7 @@
 import Foundation
 
 public class JSONParser {
-    public func decode<T: Decodable>(json: Data, as clazz: T.Type) -> T? {
+    public static func decode<T: Decodable>(json: Data, as clazz: T.Type) -> T? {
         do {
             let decoder = JSONDecoder()
             

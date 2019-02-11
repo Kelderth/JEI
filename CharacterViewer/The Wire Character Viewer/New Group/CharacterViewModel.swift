@@ -17,19 +17,15 @@ class CharacterViewModel {
     
     func loadPersistedCharacters() {
         let fetchRequest: NSFetchRequest<TheWireCharacter> = TheWireCharacter.fetchRequest()
-        do{
+        do {
             let charactersPersisted = try StorageManager.persistentContainer.viewContext.fetch(fetchRequest)
-
-                self.characters = charactersPersisted
-            
+            self.characters = charactersPersisted
         } catch {
             self.characters = []
         }
-    
     }
     
     func fetchCharacters() {
-        
         self.downloadCharacters() { [weak self] (_) in
             self?.updateCharacters()
         }
@@ -41,33 +37,24 @@ class CharacterViewModel {
     }
     
     func downloadCharacters(completion: @escaping ([TheWireCharacter]) -> Void) {
-        
         let config = parseConfig()
         if let url = URL(string: config.urlString) {
             NetworkManager.performRequest(for: url, httpMethod: .get) { (unsafedata, error) in
                 guard let data = unsafedata else { completion([]); return }
                 
-                do {
-                    print(data)
-                    let charactersDecoded = JSONParser.decode(json: data, as: TheWireCharacterDecoder.self)!
+                let charactersDecoded = JSONParser.decode(json: data, as: TheWireCharacterDecoder.self)!
+                var charactersCD = [TheWireCharacter]()
+                
+                for character in charactersDecoded.relatedTopics {
+                    let cdCharacter = TheWireCharacter()
                     
-                    var charactersCD = [TheWireCharacter]()
+                    cdCharacter.title = self.getText(text: character.text, element: 0)
+                    cdCharacter.url_image = character.icon.url
+                    cdCharacter.text_description = self.getText(text: character.text, element: 1)
                     
-                    for character in charactersDecoded.relatedTopics {
-                        let cdCharacter = TheWireCharacter()
-                        
-                        cdCharacter.title = self.getText(text: character.text!, element: 0)
-                        cdCharacter.url_image = character.icon!.url!
-                        cdCharacter.text_description = self.getText(text: character.text!, element: 1)
-                        
-                        charactersCD.append(cdCharacter)
-                    }
-                    completion(charactersCD)
-                    
-                } catch let jsonErr {
-                    print("Error serializing json: ", jsonErr)
-                    completion([]); return
+                    charactersCD.append(cdCharacter)
                 }
+                completion(charactersCD)
             }
         }
     }
