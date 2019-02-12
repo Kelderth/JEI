@@ -38,10 +38,11 @@ class FirstViewController: UIViewController {
         print(config.appName)
         StorageManager.dataModel = config.dataModel
         vm = CharacterViewModel()
-        vm.fetchCharacters()
+        vm.fetchCharacters {
+            self.updateLabel()
+        }
         
         
-        updateLabel()
         fetchData()
         addCharacter()
         
@@ -71,12 +72,14 @@ class FirstViewController: UIViewController {
     
     func updateLabel(){
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+        DispatchQueue.main.async {
             self.characterNameLabel.text = self.vm.title(index: self.characterIndex)
             self.characterDescriptionLabel.text = self.vm.textDescription(index: self.characterIndex)
             //        characterImage.image = vm.image(index: characterIndex)
             self.navigationItem.title = self.vm.title(index: self.characterIndex)
-        })
+        }
+//        })
         
     }
     

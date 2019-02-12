@@ -14,6 +14,8 @@ class MasterViewController: UIViewController, UISplitViewControllerDelegate {
     @IBOutlet weak var collectionViewContainer: UIView!
     @IBOutlet weak var TableViewContainer: UIView!
     
+    var vm = CharacterViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

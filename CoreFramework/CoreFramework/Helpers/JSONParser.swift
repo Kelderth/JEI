@@ -12,7 +12,6 @@ public class JSONParser {
     public static func decode<T: Decodable>(json: Data, as clazz: T.Type) -> T? {
         do {
             let decoder = JSONDecoder()
-            decoder.
             
             let context = StorageManager.persistentContainer.viewContext
             decoder.userInfo[CodingUserInfoKey.context!] = context

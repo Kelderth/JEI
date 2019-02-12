@@ -43,9 +43,11 @@ extension CharactersListViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CharacterCellTableViewCell else { return UITableViewCell() }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+        DispatchQueue.main.async {
             cell.setup(text: self.vm.title(index: indexPath.row))
-        })
+        }
+//        })
         
         
         return cell

@@ -6,14 +6,14 @@
 //  Copyright © 2019 Isai Yepez. All rights reserved.
 //
 import Foundation
-import CoreData
+//import CoreData
 import CoreFramework
 
 class CharacterViewModel {
     
     fileprivate var characters = [TWCharacter]()
     
-    private let baseUrl: String = "https://api.duckduckgo.com/"
+    fileprivate let baseUrl: String = "https://api.duckduckgo.com/"
     
     func loadPersistedCharacters() {
 //        let fetchRequest: NSFetchRequest<TheWireCharacter> = TheWireCharacter.fetchRequest()
@@ -25,9 +25,10 @@ class CharacterViewModel {
 //        }
     }
     
-    func fetchCharacters() {
+    func fetchCharacters(completion: @escaping ()->Void) {
         self.downloadCharacters() { [weak self] (_) in
             //self?.updateCharacters()
+            completion()
         }
     }
     
@@ -84,7 +85,8 @@ class CharacterViewModel {
     }
     
     func title(index: Int) -> String {
-        return "TWC"//self.getText(text: self.characters[index].description, element: 0)
+//        return "TWC"
+        return self.getText(text: self.characters[index].description, element: 0)
     }
     
     func textDescription(index: Int) -> String {

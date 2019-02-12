@@ -40,10 +40,12 @@ extension CharactersGalleryViewController: UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CharacterCollectionViewCell else { return UICollectionViewCell() }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+        DispatchQueue.main.async {
             cell.setup(text: self.vm.title(index: indexPath.row))
+        }
 
-        })
+//        })
         
         return cell
     }
